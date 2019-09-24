@@ -41,7 +41,7 @@
 		<json:object-to-json-transformer doc:name="Object to JSON" />
 		<jms:outbound-endpoint queue="flights" connector-ref="Active_MQ" doc:name="JMS" />
 	</flow>
-	 
+	  
 	<flow name="maven-projectFlow">
 		<jms:inbound-endpoint queue="flights" connector-ref="Active_MQ" doc:name="JMS" />
 		<logger message="#[payload]" level="INFO" doc:name="Logger" />
